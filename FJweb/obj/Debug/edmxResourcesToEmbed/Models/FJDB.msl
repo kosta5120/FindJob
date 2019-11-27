@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FindJobModelStoreContainer" CdmEntityContainer="FindJobEntities1">
+    <EntitySetMapping Name="FJ_JobType">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_JobType">
+        <MappingFragment StoreEntitySet="FJ_JobType">
+          <ScalarProperty Name="IDTypePosition" ColumnName="IDTypePosition" />
+          <ScalarProperty Name="jobType" ColumnName="jobType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_SubCategory_Work">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_SubCategory_Work">
+        <MappingFragment StoreEntitySet="FJ_SubCategory_Work">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCategoryWork" ColumnName="IDCategoryWork" />
+          <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="FindJobModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_Categorys_Of_Works">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_Categorys_Of_Works">
+        <MappingFragment StoreEntitySet="FJ_Categorys_Of_Works">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryWork" ColumnName="CategoryWork" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_JobsPosts">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_JobsPosts">
+        <MappingFragment StoreEntitySet="FJ_JobsPosts">
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Post_Title" ColumnName="Post_Title" />
+          <ScalarProperty Name="Name_of_Publisher" ColumnName="Name_of_Publisher" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Typ_of_job" ColumnName="Typ_of_job" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="CategoryPosition" ColumnName="CategoryPosition" />
+          <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+          <ScalarProperty Name="NumberOfPosition" ColumnName="NumberOfPosition" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_Attachment">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_Attachment">
+        <MappingFragment StoreEntitySet="FJ_Attachment">
+          <ScalarProperty Name="Date_Time" ColumnName="Date Time" />
+          <ScalarProperty Name="CV" ColumnName="CV" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_Sing_up">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_Sing_up">
+        <MappingFragment StoreEntitySet="FJ_Sing up">
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone Number" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_Citys">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_Citys">
+        <MappingFragment StoreEntitySet="FJ_Citys">
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+          <ScalarProperty Name="idCity" ColumnName="idCity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_Region">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_Region">
+        <MappingFragment StoreEntitySet="FJ_Region">
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_Administrators">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_Administrators">
+        <MappingFragment StoreEntitySet="FJ_Administrators">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_BadReports">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_BadReports">
+        <MappingFragment StoreEntitySet="FJ_BadReports">
+          <ScalarProperty Name="NumberOfReports" ColumnName="NumberOfReports" />
+          <ScalarProperty Name="IDPost" ColumnName="IDPost" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AllCategorysWork" FunctionName="FindJobModel.Store.AllCategorysWork" />
+    <FunctionImportMapping FunctionImportName="Attachments" FunctionName="FindJobModel.Store.Attachments" />
+    <FunctionImportMapping FunctionImportName="GetSubcategoryWork" FunctionName="FindJobModel.Store.GetSubcategoryWork" />
+    <FunctionImportMapping FunctionImportName="JobsPosts" FunctionName="FindJobModel.Store.JobsPosts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FindJobModel.JobsPosts_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Post_Title" ColumnName="Post_Title" />
+          <ScalarProperty Name="Name_of_Publisher" ColumnName="Name_of_Publisher" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Typ_of_job" ColumnName="Typ_of_job" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="CategoryPosition" ColumnName="CategoryPosition" />
+          <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+          <ScalarProperty Name="NumberOfPosition" ColumnName="NumberOfPosition" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SavePostJob" FunctionName="FindJobModel.Store.SavePostJob" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="FindJobModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="FindJobModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="FindJobModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="FindJobModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FindJobModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="FindJobModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FindJobModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FindJobModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FindJobModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="CountPoistPerMonth" FunctionName="FindJobModel.Store.CountPoistPerMonth">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FindJobModel.CountPoistPerMonth_Result">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="QuantityOfJobsInEachCity" FunctionName="FindJobModel.Store.QuantityOfJobsInEachCity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FindJobModel.QuantityOfJobsInEachCity_Result">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

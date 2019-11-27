@@ -1,0 +1,103 @@
+﻿@model FJweb.Models.SearchFromHomePage
+
+@{
+    ViewBag.Title = "Find Job";
+
+}
+
+@*מנוע חיפוש , ניווט לעמוד מודעות*@
+<hr />
+<div class="jumbotron" style="background-image: url('../../ACC/MW-DO554_job_in_20150622115359_ZH.jpg');">
+    <form action="http://localhost:50203/Home/AllJobs" method="post">
+
+        <div class="form-row jumbotron" style="direction:rtl;opacity:0.85">
+            <div class="col">
+                <label for="usr"><h4>מה</h4></label>
+                @Html.TextBox("searchFromTextBoxWhat", ViewBag.searchLis as string, new { @class = "form-control", @id = "searchFromTextBoxWhat", })
+                <label for="usr"><h6>הגדרת תפקיד, מילות מפתח</h6></label>
+            </div>
+
+            <div class="col">
+                <label for="usr"><h4>איפה</h4></label>
+                @Html.TextBox("searchFromTexBoxWhere", ViewBag.searchLis2 as string, new { @class = "form-control", @id = "searchFromTexBoxWhere" })
+                <label for="usr"><h6>עיר או איזור</h6></label>
+            </div>
+            <div class="col-auto flo" style="margin-top:2.7em">
+                <input class="btn btn-primary" type="submit" value="מצא משרה" />
+            </div>
+        </div>
+    </form>
+</div>
+<hr />
+@*הצגת נתונים וכמות משרות לפי תחום וניווט לעמוד מודעות*@
+<div class="row container-fluid" style="direction:rtl">
+    <div class="col-md-4">
+        <div class="list-group dropdown show">
+            <a href="#" class="list-group-item list-group-item-action active">
+                דרושים לפי תחום
+            </a>
+            @for (var i = 0; i < 6; i++)
+            {
+
+                <a href="@Url.Action("AllJobs","Home", new { searchForPage= @ViewBag.CL[i].CategoryWork })" class="list-group-item list-group-item-action">@ViewBag.CL[i].CategoryWork<span class="badge badge-dark" style="position:absolute;left:30px;top:20px">@ViewBag.countC[i]</span><span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+
+            }
+
+            <div class="collapse" id="collapseCategory">
+                @for (var i = 6; i < ViewBag.CL.Count; i++)
+                {
+                    <a href="@Url.Action("AllJobs","Home", new {searchForPage= @ViewBag.CL[i].CategoryWork })" class="list-group-item list-group-item-action">@ViewBag.CL[i].CategoryWork<span class="badge badge-dark" style="position:absolute;left:30px;top:20px">@ViewBag.countC[i]</span><span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+                }
+            </div>
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseCategory" role="button" aria-expanded="false" aria-controls="collapseCategory">
+                ראה עוד
+            </a>
+
+        </div>
+    </div>
+
+    @*חיפוש לפי אזורים וניווט לעמוד מודעות*@
+    <div class="col-md-4">
+        <div class="list-group dropdown show">
+            <a href="#" class="list-group-item list-group-item-action active">
+                דרושים לפי אזור
+            </a>
+            <a href="@Url.Action("AllJobs","Home", new { searchForPage="צפון",searchhByRegionFromHomePage = "צפון"})" class="list-group-item list-group-item-action">צפון<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+            <a href="@Url.Action("AllJobs","Home", new { searchForPage="שרון",searchhByRegionFromHomePage = "שרון" })" class="list-group-item list-group-item-action">שרון<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+            <a href="@Url.Action("AllJobs","Home", new { searchForPage="מרכז",searchhByRegionFromHomePage = "מרכז" })" class="list-group-item list-group-item-action">מרכז<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+            <a href="@Url.Action("AllJobs","Home", new { searchForPage="ירושלים",searchhByRegionFromHomePage = "ירושלים" })" class="list-group-item list-group-item-action">ירושלים<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+            <a href="@Url.Action("AllJobs","Home", new { searchForPage="שפלה",searchhByRegionFromHomePage = "שפלה"})" class="list-group-item list-group-item-action">שפלה<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+            <a href="@Url.Action("AllJobs","Home", new { searchByRegion="דרום",searchhByRegionFromHomePage = "דרום" })" class="list-group-item list-group-item-action">דרום<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+            <a href="@Url.Action("AllJobs","Home", new { searchForPage="חוץ לארץ",searchhByRegionFromHomePage = "חוץ לארץ" })" class="list-group-item list-group-item-action">חוץ לארץ<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+
+        </div>
+    </div>
+    @*חיפוש לפי סוג משרה וניווט לעמוד מודעות*@
+    <div class="col-md-4">
+        <div class="list-group dropdown show">
+            <a href="#" class="list-group-item list-group-item-action active">
+                דרושים לפי סוג משרה
+            </a>
+            @for (var i = 0; i < 6; i++)
+            {
+                <a href="@Url.Action("AllJobs","Home", new { searchForPage= @ViewBag.JTL[i].jobType, searchByTypeFromHomePage = @ViewBag.JTL[i].jobType })" class="list-group-item list-group-item-action">@ViewBag.JTL[i].jobType<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+            }
+            <div class="collapse" id="collapseTypOfJob">
+                @for (var i = 6; i < ViewBag.JTL.Count; i++)
+                {
+                    <a href="@Url.Action("AllJobs","Home", new { searchForPage= @ViewBag.JTL[i].jobType, searchByTypeFromHomePage = @ViewBag.JTL[i].jobType })" class="list-group-item list-group-item-action">@ViewBag.JTL[i].jobType<span style="position:absolute;left:15px;top:15px">&raquo;</span></a>
+                }
+
+            </div>
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseTypOfJob" role="button" aria-expanded="false" aria-controls="collapseTypOfJob">
+                ראה עוד
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

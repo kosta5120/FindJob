@@ -1,0 +1,124 @@
+﻿@{
+    var i = 0;
+    int num1 = (ViewBag.ShowMore.Count / 2) + 1;
+    var num2 = ViewBag.ShowMore.Count;
+}
+
+<div class="modal-dialog  modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5 class="modal-title" id="exampleModalLongTitle">תחומים </h5>
+        </div>
+        <div class="modal-body" dir="rtl">
+            <div class="card-body">
+                <div class="row">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="" dir="rtl">
+
+                        <ul class="list-unstyled mb-0">
+                            @if (ViewBag.val == 1)
+                            {
+                                for (i = 0; i < num1; i++)
+                                {
+                                    <li style="width:330px;">
+                                        <a href="@Url.Action("AllJobs", "Home" , new { searchForPage= ViewBag.ShowMore[i].Subcategory + "," + @ViewBag.TitleSearch})" class="list-group-item list-group-item-action" style="font-size:14px;color:black;">
+                                            @ViewBag.ShowMore[i].Subcategory
+                                            <span class="badge badge-primary" style="position:absolute;left:30px;top:15px">@ViewBag.count[i] </span><span style="position:absolute;left:15px;top:10px">&raquo;</span>
+                                            @*<span class="Counter"> ( @ViewBag.count[i] )</span>*@
+                                        </a>
+                                    </li>
+                                }
+                            }
+                            else if (ViewBag.val == 2)
+                            {
+                                for (i = 0; i < num1; i++)
+                                {
+                                    <li style="width:330px;">
+                                        <a href="@Url.Action("AllJobs", "Home" , new { searchForPage=ViewBag.ShowMore[i].jobType + "," + @ViewBag.TitleSearch })" class="list-group-item list-group-item-action" style="font-size:14px;color:black;">
+                                            @ViewBag.ShowMore[i].jobType
+                                            <span class="badge badge-primary" style="position:absolute;left:30px;top:15px">@ViewBag.count[i] </span><span style="position:absolute;left:15px;top:10px">&raquo;</span>
+                                            @*<span class="Counter"> ( @ViewBag.count[i] )</span>*@
+                                        </a>
+                                    </li>
+                                }
+                            }
+                            else
+                            {
+                                for (i = 0; i < num1; i++)
+                                {
+                                    <li style="width:330px;">
+                                        <a href="@Url.Action("AllJobs", "Home" , new { searchForPage=ViewBag.ShowMore[i].CategoryWork + "," + @ViewBag.TitleSearch })" class="list-group-item list-group-item-action" style="font-size:14px;color:black;">
+                                            @ViewBag.ShowMore[i].CategoryWork
+                                            <span class="badge badge-primary" style="position:absolute;left:30px;top:15px">@ViewBag.count[i] </span><span style="position:absolute;left:15px;top:10px">&raquo;</span>
+                                            @*<span class="Counter"> ( @ViewBag.count[i] )</span>*@
+                                        </a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="" dir="rtl">
+                        <ul class="list-unstyled mb-0">
+                            @if (ViewBag.val == 1)
+                            {
+                                for (i = num1; i < num2; i++)
+                                {
+                                    <li style="width:330px;">
+                                        <a href="@Url.Action("AllJobs", "Home" , new { searchForPage= ViewBag.ShowMore[i].Subcategory + "," + @ViewBag.TitleSearch })" class="list-group-item list-group-item-action" style="font-size:14px;color:black;">
+                                            @ViewBag.ShowMore[i].Subcategory
+                                            <span class="badge badge-primary" style="position:absolute;left:30px;top:15px">@ViewBag.count[i] </span><span style="position:absolute;left:15px;top:10px">&raquo;</span>
+                                            @*<span class="Counter"> ( @ViewBag.count[i] )</span>*@
+                                        </a>
+                                    </li>
+                                }
+                            }
+
+                            else if (ViewBag.val == 2)
+                            {
+                                for (i = num1; i < num2; i++)
+                                {
+                                    <li style="width:330px;">
+                                        <a href="@Url.Action("AllJobs", "Home" , new { searchForPage=ViewBag.ShowMore[i].jobType + "," + @ViewBag.TitleSearch })" class="list-group-item list-group-item-action" style="font-size:14px;color:black;">
+                                            @ViewBag.ShowMore[i].jobType
+                                            <span class="badge badge-primary" style="position:absolute;left:30px;top:15px">@ViewBag.count[i] </span><span style="position:absolute;left:15px;top:10px">&raquo;</span>
+                                            @*<span class="Counter"> ( @ViewBag.count[i] )</span>*@
+                                        </a>
+                                    </li>
+                                }
+
+                            }
+                            else 
+                            {
+                                for (i = num1; i < num2; i++)
+                                {
+                                    <li style="width:330px;">
+                                        <a href="@Url.Action("AllJobs", "Home" , new { searchForPage=ViewBag.ShowMore[i].CategoryWork + "," + @ViewBag.TitleSearch })" class="list-group-item list-group-item-action" style="font-size:14px;color:black;">
+                                            @ViewBag.ShowMore[i].CategoryWork
+                                            <span class="badge badge-primary" style="position:absolute;left:30px;top:15px">@ViewBag.count[i] </span><span style="position:absolute;left:15px;top:10px">&raquo;</span>
+                                            @*<span class="Counter"> ( @ViewBag.count[i] )</span>*@
+                                        </a>
+                                    </li>
+                                }
+
+                            }
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.mdb-select').materialSelect();
+    });
+</script>
+

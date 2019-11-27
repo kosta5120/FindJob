@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FindJobModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FJ_JobType">
+    <Key>
+      <PropertyRef Name="IDTypePosition" />
+    </Key>
+    <Property Name="jobType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IDTypePosition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="FJ_SubCategory_Work">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDCategoryWork" Type="Int32" Nullable="false" />
+    <Property Name="Subcategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="FJ_Categorys_Of_Works">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FJ_JobsPosts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Post_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name_of_Publisher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Typ_of_job" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Experience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Subcategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="FindJobEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FJ_JobType" EntityType="Self.FJ_JobType" />
+    <EntitySet Name="FJ_SubCategory_Work" EntityType="Self.FJ_SubCategory_Work" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="FJ_Categorys_Of_Works" EntityType="Self.FJ_Categorys_Of_Works" />
+    <EntitySet Name="FJ_JobsPosts" EntityType="Self.FJ_JobsPosts" />
+    <EntitySet Name="FJ_Attachment" EntityType="FindJobModel.FJ_Attachment" />
+    <EntitySet Name="FJ_Sing_up" EntityType="FindJobModel.FJ_Sing_up" />
+    <EntitySet Name="FJ_Citys" EntityType="FindJobModel.FJ_Citys" />
+    <EntitySet Name="FJ_Region" EntityType="FindJobModel.FJ_Region" />
+    <EntitySet Name="FJ_Administrators" EntityType="FindJobModel.FJ_Administrators" />
+    <EntitySet Name="FJ_BadReports" EntityType="FindJobModel.FJ_BadReports" />
+    <FunctionImport Name="AllCategorysWork" />
+    <FunctionImport Name="Attachments">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="CV" Mode="In" Type="Binary" />
+      <Parameter Name="dateTime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSubcategoryWork">
+      <Parameter Name="SubCategoryWork" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="JobsPosts" ReturnType="Collection(FindJobModel.JobsPosts_Result)" />
+    <FunctionImport Name="SavePostJob">
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="nammeOfPublisher" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="Salary" Mode="In" Type="String" />
+      <Parameter Name="jobType" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="Requirements" Mode="In" Type="String" />
+      <Parameter Name="categoryJob" Mode="In" Type="String" />
+      <Parameter Name="numberOfPosition" Mode="In" Type="String" />
+      <Parameter Name="dateTime" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(FindJobModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(FindJobModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="CountPoistPerMonth" ReturnType="Collection(FindJobModel.CountPoistPerMonth_Result)" />
+    <FunctionImport Name="QuantityOfJobsInEachCity" ReturnType="Collection(FindJobModel.QuantityOfJobsInEachCity_Result)" />
+  </EntityContainer>
+  <EntityType Name="FJ_Attachment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CV" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Date_Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FJ_Sing_up">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E_Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Name="Phone_Number" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FJ_Citys">
+    <Key>
+      <PropertyRef Name="idCity" />
+    </Key>
+    <Property Name="idCity" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idRegion" Type="Int32" />
+    <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FJ_Region">
+    <Key>
+      <PropertyRef Name="idRegion" />
+    </Key>
+    <Property Name="idRegion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FJ_Administrators">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FJ_BadReports">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="IDPost" Type="Int32" />
+    <Property Name="NumberOfReports" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="JobsPosts_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Post_Title" Nullable="true" />
+    <Property Type="String" Name="Name_of_Publisher" Nullable="true" />
+    <Property Type="String" Name="Region" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="Salary" Nullable="true" />
+    <Property Type="String" Name="Typ_of_job" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="String" Name="Experience" Nullable="true" />
+    <Property Type="String" Name="CategoryPosition" Nullable="true" />
+    <Property Type="String" Name="Subcategory" Nullable="true" />
+    <Property Type="String" Name="NumberOfPosition" Nullable="true" />
+    <Property Type="String" Name="dateTime" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CountPoistPerMonth_Result">
+    <Property Type="Int32" Name="Count" Nullable="true" />
+    <Property Type="Int32" Name="Month" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="QuantityOfJobsInEachCity_Result">
+    <Property Type="Int32" Name="Count" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" />
+  </ComplexType>
+</Schema>

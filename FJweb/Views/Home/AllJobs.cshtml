@@ -1,0 +1,386 @@
+﻿@model PagedList.IPagedList<FJweb.Models.FJ_JobsPosts>
+@using PagedList
+@using PagedList.Mvc
+@using FJweb.Models
+
+@{
+    ViewBag.title = "AllJobs";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="my-4">@ViewBag.TitleSearch</h1>
+
+            @if (ViewBag.AJL != null)
+            {
+                <small style="font-weight:bold;margin-top:5em;">כמות משרות @ViewBag.numberOfJobs</small>
+                foreach (var details in ViewBag.AJL)
+                {
+                    @* לוח של משרה*@
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title"  dir="rtl">@details.Post_Title</h2>
+                            <div style="font-size:12px;">
+                                <ul style="list-style-type: none;">
+                                    <li title="מיקום המשרה" style="font-size:14px;"><small style="font-size:14px; font-weight:bold;">מיקום  משרה:</small> <a>@details.Address</a></li>
+                                    <li title="סוג המשרה" style="font-size:14px;"><small style="font-size:14px; font-weight:bold;">סוג משרה:</small> @details.Typ_of_job</li>
+                                    <li title="שכר" style="font-size:14px;"><small style="font-size:14px; font-weight:bold;">שכר: </small>@details.Salary  </li>
+                                </ul>
+                            </div>
+                            <small style="font-weight:bold;font-size:14px;">תיאור</small>
+                            <p class="card-text" dir="rtl"><span style="white-space: pre-line;">@details.Description</span></p>
+                            <small style="font-weight:bold;font-size:14px;">דרישות</small>
+                            <p class="card-text" dir="rtl"><span style="white-space: pre-line;">@details.Experience</span></p>
+                            @Html.ActionLink("הגש מועמדות", "AllJobs", new { id = @details.ID }, new { @class = "sendCvButton btn btn-primary", data_id = @details.ID, data_toggle = "modal", data_target = "#SendCV" })
+                        </div>
+                        <div class="card-footer text-muted" dir="rtl">
+                            <small style="font-size:14px">
+                                פורסם ע"י
+                                <a href="#"> @details.Name_of_Publisher</a>
+                            </small>
+                            <small style="font-size:14px">
+                                בתאריך @details.dateTime
+                            </small>
+                            <br>
+                            <small style="font-size:15px;"> מספר משרה @details.NumberOfPosition</small>
+                            <br />
+                            <small style="font-weight:bold;font-size:14px;">דרושים בתחומים</small>
+                            <br />
+                            <small style="font-size:15px;">@details.CategoryPosition » @details.Subcategory</small>
+                            <div style="margin-right:33em;direction:ltr">
+                                @Html.ActionLink("דיווח על המודעה", "BadPost", new { id = @details.ID }, new { @class = "btn btn-danger", id = @details.ID, replyblogPostmodel = Model })
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <!-- Pagination -->
+                    <div >
+                        <ul class="pagination" >
+                            <li class="page-item">
+                                @Html.PagedListPager(Model, page => Url.Action("AllJobs", new { page, pageSize = Model.PageSize, searchForPage = @ViewBag.TitleSearch }))
+                            </li>
+                        </ul>
+
+                    </div>
+             }
+             else
+             {
+                <h5 style="font-weight:bold;margin-top:5em;">לא נמצאו תוצאות עבור חיפוש משרות @ViewBag.TitleSearch</h5>
+             }
+
+        </div>
+        
+        @*מנוע חיפוש*@
+        <div class="col-md-4">
+            <div class="card my-4">
+                <h5 class="card-header">חיפוש</h5>
+                <div class="card-body">
+                    <form action="AllJobs" method="post">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="submit">חפש</button>
+                            </span>
+                            @Html.TextBox("searchFromTextBoxWhat", ViewBag.searchList1 as string, new { @class = "form-control", @dir = "rtl", placeholder = "מה", required = "required" })
+                        </div>
+                    </form>
+                    <form action="AllJobs" method="post">
+                        <div class="input-group" style="margin-top: 15px;">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="submit">חפש</button>
+                            </span>
+                            @Html.TextBox("searchFromTexBoxWhere", ViewBag.searchLinst2 as string, new { @class = "form-control", @dir = "rtl", placeholder = "איפה", required = "required" })
+                        </div>
+                    </form>
+                </div>
+            </div>
+            @if (ViewBag.Filters != null)
+            {
+                <div class="card my-4">
+                    <h5 class="card-header">סינון</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6" dir="rtl" style="margin-left:160px;">
+                                <ul class="list-unstyled mb-0">
+                                    @if (ViewBag.Filters != null)
+                                    {
+
+                                        for (var i = 0; i < ViewBag.Filters.Count; i++)
+                                        {
+                                            <li style="width:300px;">
+                                                <a href="@Url.Action("AllJobs", "Home" , new { Filter=@ViewBag.Filters[i], searchForPage= @ViewBag.TitleSearch})" style="font-size:14px;color:black;">
+                                                    » @ViewBag.Filters[i]
+
+                                                </a>
+                                            </li>
+                                        }
+                                    }
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @* הצגת תת תחום וכמות לפי התחום *@
+            @if (ViewBag.AJL != null)
+            {
+                if (@ViewBag.subcategory != null)
+                {
+                    <div class="card my-4">
+                        <h5 class="card-header">תחומים</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6" dir="rtl" style="margin-left:160px;">
+                                    <ul class="list-unstyled mb-0">
+                                        @if (ViewBag.subcategory != null)
+                                        {
+                                            for (var i = 0; i < 6; i++)
+                                            {
+                                                <li style="width:300px;">
+                                                    <a href="@Url.Action("AllJobs", "Home", new { searchForPage = @ViewBag.subcategory[i].Subcategory + "," + @ViewBag.TitleSearch })" style="font-size:14px;color:black;">
+                                                        » @ViewBag.subcategory[i].Subcategory
+                                                        <span class="Counter"> ( @ViewBag.countSC[i] )</span>
+                                                    </a>
+                                                </li>
+                                            }
+                                        }
+                                        else if (ViewBag.category != null)
+                                        {
+                                            for (var i = 0; i < 6; i++)
+                                            {
+                                                <li style="width:300px;">
+                                                    <a href="@Url.Action("AllJobs", "Home", new { searchForPage = @ViewBag.category[i].CategoryWork + "," + @ViewBag.TitleSearch })" style="font-size:14px;color:black;">
+                                                        » @ViewBag.category[i].CategoryWork
+                                                        <span class="Counter"> ( @ViewBag.countSC[i] )</span>
+                                                    </a>
+                                                </li>
+                                            }
+                                        }
+
+                                        <li>
+                                            <a href="#" class="btn-block" style="font-size:14px;color:black;" val=""> עוד...</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="modal fade" id="More" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true" data-url='@Url.Action("ModalPopup", "Home", new { Val="1," + @ViewBag.TitleSearch})'></div>
+                
+                if (@ViewBag.category != null)
+                {
+                    <div class="card my-4">
+                        <h5 class="card-header">קטגוריה</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6" dir="rtl" style="margin-left:160px;">
+                                    <ul class="list-unstyled mb-0">
+
+                                        @if (ViewBag.category != null)
+                                        {
+                                            for (var i = 0; i < 6; i++)
+                                            {
+                                                <li style="width:300px;">
+                                                    <a href="@Url.Action("AllJobs", "Home", new { searchForPage = @ViewBag.category[i].CategoryWork + "," + @ViewBag.TitleSearch })" style="font-size:14px;color:black;">
+                                                        » @ViewBag.category[i].CategoryWork
+                                                        <span class="Counter"> ( @ViewBag.countSC[i] )</span>
+                                                    </a>
+                                                </li>
+                                            }
+                                        }
+
+                                        <li>
+                                            <a href="#" class="btn-block2" style="font-size:14px;color:black;" val=""> עוד...</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                } 
+                <div class="modal fade" id="More2" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true" data-url='@Url.Action("ModalPopup", "Home", new { Val="3," + @ViewBag.TitleSearch})'></div>
+
+                @* הצגת סוג משרות וכמות לפי התחום*@
+                if (@ViewBag.typJob != null)
+                {
+                    <div class="card my-4">
+                        <h5 class="card-header">סוג משרה</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6" dir="rtl" style="margin-left:160px;">
+                                    <ul class="list-unstyled mb-0">
+
+                                        @for (var i = 0; i < 6; i++)
+                                        {
+                                            <li style="width:300px;">
+                                                <a href="@Url.Action("AllJobs", "Home" , new { searchForPage= @ViewBag.typJob[i].jobType+ "," + @ViewBag.TitleSearch})" style="font-size:14px;color:black;">
+                                                    » @ViewBag.typJob[i].jobType
+                                                    <span class="Counter"> ( @ViewBag.countOfTypJobs[i] )</span>
+                                                </a>
+
+                                            </li>
+                                        }
+                                        <li>
+                                            <a href="#" class="btn-block1" style="font-size:14px;color:black;" val="2,ViewBag.TitleSearch"> עוד...</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="modal fade" id="More1" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true" data-url='@Url.Action("ModalPopup", "Home", new { Val="2," + @ViewBag.TitleSearch})'></div>
+                @*הצדה אזורים וכמות לפי התחום *@
+                if (@ViewBag.region != null)
+                {
+                    <div class="card my-4" dir="rtl">
+                        <h5 class="card-header">אזור משרה</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6" dir="rtl">
+                                    <ul class="list-unstyled mb-0">
+                                        @for (var i = 0; i < 4; i++)
+                                        {
+                                            <li>
+                                                <a href="@Url.Action("AllJobs", "Home" , new { searchForPage= @ViewBag.region[i].Region + "," + @ViewBag.TitleSearch} )" style="font-size:14px;color:black;">
+                                                    » @ViewBag.region[i].Region
+                                                    <span class="Counter"> ( @ViewBag.countRegion[i] )</span>
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6" dir="rtl">
+                                    <ul class="list-unstyled mb-0">
+                                        @for (var i = 4; i < 7; i++)
+                                        {
+                                            <li>
+                                                <a href="@Url.Action("AllJobs", "Home" , new { searchForPage= @ViewBag.region[i].Region+ "," + @ViewBag.TitleSearch } )" style="font-size:14px;color:black;">
+                                                    » @ViewBag.region[i].Region
+                                                    <span class="Counter"> ( @ViewBag.countRegion[i] )</span>
+                                                </a>
+                                            </li>
+                                        }
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                if (ViewBag.cityList != null)
+                {
+                    <div class="card my-4" dir="rtl">
+                        <h5 class="card-header">מיקום המשרה</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6" dir="rtl">
+                                    <ul class="list-unstyled mb-0">
+                                        @for (var i = 0; i < ViewBag.cityList.Count; i++)
+                                        {
+                                            <li style="width:300px;">
+                                                <a href="@Url.Action("AllJobs", "Home" , new { searchForPage= @ViewBag.cityList[i].City + "," + @ViewBag.TitleSearch })" style="font-size:14px;color:black;">
+                                                    » @ViewBag.cityList[i].City
+                                                    <span class="Counter"> ( @ViewBag.countCitys[i] )</span>
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="SendCV" tabindex="-1" role="dialog" aria-labelledby="SendCV" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title" id="exampleModalLongTitle">הגש מועמדות</h5>
+
+            </div>
+            <div class="modal-body" dir="rtl">
+                <fieldset>
+                    @using (@Html.BeginForm("SendCV", "Home", FormMethod.Post, new { @id = "form1", @enctype = "multipart/form-data" }))
+                    {
+                        @Html.ValidationSummary()
+                        @ViewBag.Message
+                        <input type="file" name="fileUploader" />
+                        <br />
+                        @Html.Label("מכתב מקדים")
+                        @Html.TextArea("Body", null, new { @class = "form-control" })
+                        <div class="modal-footer" style="text-align:center;">
+                            <input href="#" class="btn btn-primary" type="submit" value="שלח" name="id=">
+                            <input type="hidden" name="id" id="articleId" class="form-control-file" value="" />
+                        </div>
+                    }
+                </fieldset>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.btn-block').click(function () {
+                var url = $('#More').data('url');
+                $.get(url, function (data) {
+                    $("#More").html(data);
+                    $("#More").modal('show');
+                });
+            });
+        });
+        $(document).ready(function () {
+            $('.btn-block1').click(function () {
+                var url = $('#More1').data('url');
+                $.get(url, function (data) {
+                    $("#More1").html(data);
+                    $("#More1").modal('show');
+                });
+            });
+    });
+    $(document).ready(function () {
+        $('.btn-block2').click(function () {
+            var url = $('#More2').data('url');
+            $.get(url, function (data) {
+                $("#More2").html(data);
+                $("#More2").modal('show');
+            });
+        });
+    });
+
+        $(document).ready(function () {
+
+            $('.sendCvButton').click(function () {
+
+                $('#SendCV').find('#articleId').val(
+                    $(this).data('id'));
+            });
+
+        });
+
+
+</script>
+
+
+
+
+

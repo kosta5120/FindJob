@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "BadPosts";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container md">
+    @*טבלה של מודעות לא הולמות*@
+    <div class="card" dir="rtl">
+        <h3 class="card-header text-center font-weight-bold text-uppercase py-4"> מודעות לא הולמות</h3>
+        <div class="card-body">
+            <div id="table" class="table-editable">
+
+                <table class="table table-bordered table-responsive-md table-striped text-center">
+                    <tr>
+                        <th class="text-center">מס' מודעה</th>
+                        <th class="text-center">כותרת</th>
+                        <th class="text-center">שם המפרסם</th>
+                        <th class="text-center">אימייל</th>
+                        <th class="text-center">תאריך ושעה</th>
+                        <th class="text-center">מס' פעמים שדיווחו</th>
+                        <th class="text-center">תצוגה מקדימה</th>
+                        <th class="text-center">למחוק</th>
+                        <th class="text-center">למחוק מהדיווח</th>
+                    </tr>
+                    @if (ViewBag.br != null)
+                    {
+                    for (var i = 0; i < ViewBag.br.Count; i++)
+                    {
+                    <tr>
+                        <td class="pt-3-half">@ViewBag.br[i].ID</td>
+                        <td class="pt-3-half">@ViewBag.br[i].Post_Title</td>
+                        <td class="pt-3-half">@ViewBag.br[i].Name_of_Publisher</td>
+                        <td class="pt-3-half">@ViewBag.br[i].Email</td>
+                        <td class="pt-3-half">@ViewBag.br[i].dateTime</td>
+                        <td class="pt-3-half">@ViewBag.NumberOfReports[i].NumberOfReports</td>
+                        <td>
+                            <a href="#" class="btn btn-success btn btn-rounded btn-sm my-0 btn btn-success" id="@ViewBag.br[i].ID" onclick="createModal('@Url.Action("ViewPostPopup", "AdminPage" ,new { idPostToView=ViewBag.br[i].ID })')"> הצג</a>
+                        </td>
+                        <td>
+                            <button type="button" onclick="location.href='@Url.Action("BadPost", "AdminPage" , new { idPostToDelete=ViewBag.br[i].ID})'" class="btn btn-danger btn-rounded btn-sm my-0 DeleteBtn" id="@ViewBag.br[i].ID">למחוק</button>
+                        </td>
+                        <td>
+                            <button type="button" onclick="location.href='@Url.Action("BadPost", "AdminPage" , new {idPostToRemoveFromBadReports=ViewBag.br[i].ID})'" class="btn btn-danger btn-rounded btn-sm my-0 DeleteBtn" id="@ViewBag.br[i].ID"> למחוק מהדיווח</button>
+                        </td>
+
+                    </tr>
+                    }
+                    }
+
+                </table>
+
+                <div class="modal fade" id="ViewPost" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content" id="modelContent"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    //$(document).ready(function () {
+    //    $('.btn-success').click(function () {
+    //        var url = $('#ViewPost').data('url');
+    //        $.get(url, function (data) {
+    //            $("#ViewPost").html(data);
+    //            $("#ViewPost").modal('show');
+    //        });
+    //    });
+    //});
+
+    function createModal(url) {
+        $('#modelContent').load(url);
+        $('#ViewPost').modal('show');
+    }
+
+</script>
+
+
+
+

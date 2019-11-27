@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FindJobModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FJ_Administrators">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="FJ_Attachment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="CV" Type="varbinary(max)" />
+          <Property Name="Date Time" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="FJ_BadReports">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDPost" Type="int" />
+          <Property Name="NumberOfReports" Type="int" />
+        </EntityType>
+        <EntityType Name="FJ_Categorys_Of_Works">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryWork" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="FJ_Citys">
+          <Key>
+            <PropertyRef Name="idCity" />
+          </Key>
+          <Property Name="idCity" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idRegion" Type="int" />
+          <Property Name="City" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="FJ_JobsPosts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Post_Title" Type="nvarchar(max)" />
+          <Property Name="Name_of_Publisher" Type="nvarchar(max)" />
+          <Property Name="Region" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Salary" Type="nvarchar(max)" />
+          <Property Name="Typ_of_job" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Experience" Type="nvarchar(max)" />
+          <Property Name="CategoryPosition" Type="nvarchar(max)" />
+          <Property Name="Subcategory" Type="nvarchar(max)" />
+          <Property Name="NumberOfPosition" Type="nvarchar(max)" />
+          <Property Name="dateTime" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="FJ_JobType">
+          <Key>
+            <PropertyRef Name="IDTypePosition" />
+          </Key>
+          <Property Name="IDTypePosition" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="jobType" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'FindJob.dbo.FJ_Region' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FJ_Region">
+          <Key>
+            <PropertyRef Name="idRegion" />
+          </Key>
+          <Property Name="idRegion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Region" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'FindJob.dbo.FJ_Sing up' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FJ_Sing up">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="E-Mail" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar" MaxLength="18" />
+          <Property Name="Phone Number" Type="nvarchar" MaxLength="11" />
+        </EntityType>
+        <EntityType Name="FJ_SubCategory_Work">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDCategoryWork" Type="int" Nullable="false" />
+          <Property Name="Subcategory" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Function Name="AllCategorysWork" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Attachments" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="CV" Type="varbinary(max)" Mode="In" />
+          <Parameter Name="dateTime" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="CountPoistPerMonth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="GetSubcategoryWork" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SubCategoryWork" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="JobsPosts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="QuantityOfJobsInEachCity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SavePostJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Title" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="nammeOfPublisher" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Salary" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="jobType" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Requirements" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="categoryJob" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="numberOfPosition" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="dateTime" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="FindJobModelStoreContainer">
+          <EntitySet Name="FJ_Administrators" EntityType="Self.FJ_Administrators" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FJ_Attachment" EntityType="Self.FJ_Attachment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FJ_BadReports" EntityType="Self.FJ_BadReports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FJ_Categorys_Of_Works" EntityType="Self.FJ_Categorys_Of_Works" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FJ_Citys" EntityType="Self.FJ_Citys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FJ_JobsPosts" EntityType="Self.FJ_JobsPosts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FJ_JobType" EntityType="Self.FJ_JobType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FJ_SubCategory_Work" EntityType="Self.FJ_SubCategory_Work" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FJ_Region" EntityType="Self.FJ_Region" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FJ_Region].[idRegion] AS [idRegion], 
+    [FJ_Region].[Region] AS [Region]
+    FROM [dbo].[FJ_Region] AS [FJ_Region]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FJ_Sing up" EntityType="Self.FJ_Sing up" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FJ_Sing up].[ID] AS [ID], 
+    [FJ_Sing up].[E-Mail] AS [E-Mail], 
+    [FJ_Sing up].[Password] AS [Password], 
+    [FJ_Sing up].[Phone Number] AS [Phone Number]
+    FROM [dbo].[FJ_Sing up] AS [FJ_Sing up]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FindJobModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FJ_JobType">
+          <Key>
+            <PropertyRef Name="IDTypePosition" />
+          </Key>
+          <Property Name="jobType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDTypePosition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="FJ_SubCategory_Work">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDCategoryWork" Type="Int32" Nullable="false" />
+          <Property Name="Subcategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="FJ_Categorys_Of_Works">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FJ_JobsPosts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Post_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name_of_Publisher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Typ_of_job" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Experience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Subcategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NumberOfPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="FindJobEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FJ_JobType" EntityType="Self.FJ_JobType" />
+          <EntitySet Name="FJ_SubCategory_Work" EntityType="Self.FJ_SubCategory_Work" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="FJ_Categorys_Of_Works" EntityType="Self.FJ_Categorys_Of_Works" />
+          <EntitySet Name="FJ_JobsPosts" EntityType="Self.FJ_JobsPosts" />
+          <EntitySet Name="FJ_Attachment" EntityType="FindJobModel.FJ_Attachment" />
+          <EntitySet Name="FJ_Sing_up" EntityType="FindJobModel.FJ_Sing_up" />
+          <EntitySet Name="FJ_Citys" EntityType="FindJobModel.FJ_Citys" />
+          <EntitySet Name="FJ_Region" EntityType="FindJobModel.FJ_Region" />
+          <EntitySet Name="FJ_Administrators" EntityType="FindJobModel.FJ_Administrators" />
+          <EntitySet Name="FJ_BadReports" EntityType="FindJobModel.FJ_BadReports" />
+          <FunctionImport Name="AllCategorysWork" />
+          <FunctionImport Name="Attachments">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="CV" Mode="In" Type="Binary" />
+            <Parameter Name="dateTime" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetSubcategoryWork">
+          <Parameter Name="SubCategoryWork" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="JobsPosts" ReturnType="Collection(FindJobModel.JobsPosts_Result)" />
+          <FunctionImport Name="SavePostJob">
+            <Parameter Name="Title" Mode="In" Type="String" />
+            <Parameter Name="nammeOfPublisher" Mode="In" Type="String" />
+            <Parameter Name="Address" Mode="In" Type="String" />
+            <Parameter Name="Salary" Mode="In" Type="String" />
+            <Parameter Name="jobType" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="Requirements" Mode="In" Type="String" />
+            <Parameter Name="categoryJob" Mode="In" Type="String" />
+            <Parameter Name="numberOfPosition" Mode="In" Type="String" />
+            <Parameter Name="dateTime" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(FindJobModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(FindJobModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="CountPoistPerMonth" ReturnType="Collection(FindJobModel.CountPoistPerMonth_Result)" />
+          <FunctionImport Name="QuantityOfJobsInEachCity" ReturnType="Collection(FindJobModel.QuantityOfJobsInEachCity_Result)" />
+        </EntityContainer>
+        <EntityType Name="FJ_Attachment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CV" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Date_Time" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FJ_Sing_up">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="E_Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Number" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FJ_Citys">
+          <Key>
+            <PropertyRef Name="idCity" />
+          </Key>
+          <Property Name="idCity" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idRegion" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FJ_Region">
+          <Key>
+            <PropertyRef Name="idRegion" />
+          </Key>
+          <Property Name="idRegion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FJ_Administrators">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FJ_BadReports">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="IDPost" Type="Int32" />
+          <Property Name="NumberOfReports" Type="Int32" />
+        </EntityType>
+        <ComplexType Name="JobsPosts_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Post_Title" Nullable="true" />
+          <Property Type="String" Name="Name_of_Publisher" Nullable="true" />
+          <Property Type="String" Name="Region" Nullable="true" />
+          <Property Type="String" Name="Address" Nullable="true" />
+          <Property Type="String" Name="Salary" Nullable="true" />
+          <Property Type="String" Name="Typ_of_job" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="true" />
+          <Property Type="String" Name="Description" Nullable="true" />
+          <Property Type="String" Name="Experience" Nullable="true" />
+          <Property Type="String" Name="CategoryPosition" Nullable="true" />
+          <Property Type="String" Name="Subcategory" Nullable="true" />
+          <Property Type="String" Name="NumberOfPosition" Nullable="true" />
+          <Property Type="String" Name="dateTime" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="CountPoistPerMonth_Result">
+          <Property Type="Int32" Name="Count" Nullable="true" />
+          <Property Type="Int32" Name="Month" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="QuantityOfJobsInEachCity_Result">
+          <Property Type="Int32" Name="Count" Nullable="true" />
+          <Property Type="String" Name="City" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FindJobModelStoreContainer" CdmEntityContainer="FindJobEntities1">
+          <EntitySetMapping Name="FJ_JobType">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_JobType">
+              <MappingFragment StoreEntitySet="FJ_JobType">
+                <ScalarProperty Name="IDTypePosition" ColumnName="IDTypePosition" />
+                <ScalarProperty Name="jobType" ColumnName="jobType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_SubCategory_Work">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_SubCategory_Work">
+              <MappingFragment StoreEntitySet="FJ_SubCategory_Work">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDCategoryWork" ColumnName="IDCategoryWork" />
+                <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="FindJobModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_Categorys_Of_Works">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_Categorys_Of_Works">
+              <MappingFragment StoreEntitySet="FJ_Categorys_Of_Works">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CategoryWork" ColumnName="CategoryWork" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_JobsPosts">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_JobsPosts">
+              <MappingFragment StoreEntitySet="FJ_JobsPosts">
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Post_Title" ColumnName="Post_Title" />
+                <ScalarProperty Name="Name_of_Publisher" ColumnName="Name_of_Publisher" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Typ_of_job" ColumnName="Typ_of_job" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="CategoryPosition" ColumnName="CategoryPosition" />
+                <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+                <ScalarProperty Name="NumberOfPosition" ColumnName="NumberOfPosition" />
+                <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_Attachment">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_Attachment">
+              <MappingFragment StoreEntitySet="FJ_Attachment">
+                <ScalarProperty Name="Date_Time" ColumnName="Date Time" />
+                <ScalarProperty Name="CV" ColumnName="CV" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_Sing_up">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_Sing_up">
+              <MappingFragment StoreEntitySet="FJ_Sing up">
+                <ScalarProperty Name="Phone_Number" ColumnName="Phone Number" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_Citys">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_Citys">
+              <MappingFragment StoreEntitySet="FJ_Citys">
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+                <ScalarProperty Name="idCity" ColumnName="idCity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_Region">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_Region">
+              <MappingFragment StoreEntitySet="FJ_Region">
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="idRegion" ColumnName="idRegion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_Administrators">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_Administrators">
+              <MappingFragment StoreEntitySet="FJ_Administrators">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FJ_BadReports">
+            <EntityTypeMapping TypeName="FindJobModel.FJ_BadReports">
+              <MappingFragment StoreEntitySet="FJ_BadReports">
+                <ScalarProperty Name="NumberOfReports" ColumnName="NumberOfReports" />
+                <ScalarProperty Name="IDPost" ColumnName="IDPost" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AllCategorysWork" FunctionName="FindJobModel.Store.AllCategorysWork" />
+          <FunctionImportMapping FunctionImportName="Attachments" FunctionName="FindJobModel.Store.Attachments" />
+          <FunctionImportMapping FunctionImportName="GetSubcategoryWork" FunctionName="FindJobModel.Store.GetSubcategoryWork" />
+          <FunctionImportMapping FunctionImportName="JobsPosts" FunctionName="FindJobModel.Store.JobsPosts">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FindJobModel.JobsPosts_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Post_Title" ColumnName="Post_Title" />
+                <ScalarProperty Name="Name_of_Publisher" ColumnName="Name_of_Publisher" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Typ_of_job" ColumnName="Typ_of_job" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="CategoryPosition" ColumnName="CategoryPosition" />
+                <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+                <ScalarProperty Name="NumberOfPosition" ColumnName="NumberOfPosition" />
+                <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SavePostJob" FunctionName="FindJobModel.Store.SavePostJob" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="FindJobModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="FindJobModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="FindJobModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="FindJobModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FindJobModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="FindJobModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FindJobModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FindJobModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FindJobModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="CountPoistPerMonth" FunctionName="FindJobModel.Store.CountPoistPerMonth">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FindJobModel.CountPoistPerMonth_Result">
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="QuantityOfJobsInEachCity" FunctionName="FindJobModel.Store.QuantityOfJobsInEachCity">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FindJobModel.QuantityOfJobsInEachCity_Result">
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="City" ColumnName="City" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

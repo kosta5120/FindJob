@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FindJobModelStoreContainer" CdmEntityContainer="FindJobEntities1">
+    <EntitySetMapping Name="FJ_JobType">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_JobType">
+        <MappingFragment StoreEntitySet="FJ_JobType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="jobType" ColumnName="jobType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_SubCategory_Work">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_SubCategory_Work">
+        <MappingFragment StoreEntitySet="FJ_SubCategory_Work">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCategoryWork" ColumnName="IDCategoryWork" />
+          <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_Categorys_Of_Works">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_Categorys_Of_Works">
+        <MappingFragment StoreEntitySet="FJ_Categorys_Of_Works">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryWork" ColumnName="CategoryWork" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FJ_JobsPosts">
+      <EntityTypeMapping TypeName="FindJobModel.FJ_JobsPosts">
+        <MappingFragment StoreEntitySet="FJ_JobsPosts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Post_Title" ColumnName="Post_Title" />
+          <ScalarProperty Name="Name_of_Publisher" ColumnName="Name_of_Publisher" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Typ_of_job" ColumnName="Typ_of_job" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="CategoryPosition" ColumnName="CategoryPosition" />
+          <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+          <ScalarProperty Name="NumberOfPosition" ColumnName="NumberOfPosition" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FindJobModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'FindJob.dbo.FJ_Categorys_Of_Works' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FJ_Categorys_Of_Works">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryWork" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'FindJob.dbo.FJ_JobsPosts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FJ_JobsPosts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Post_Title" Type="nvarchar(max)" />
+    <Property Name="Name_of_Publisher" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Salary" Type="nvarchar(max)" />
+    <Property Name="Typ_of_job" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Experience" Type="nvarchar(max)" />
+    <Property Name="CategoryPosition" Type="nvarchar(max)" />
+    <Property Name="NumberOfPosition" Type="nvarchar(max)" />
+    <Property Name="dateTime" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="FJ_JobType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobType" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="FJ_SubCategory_Work">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDCategoryWork" Type="int" Nullable="false" />
+    <Property Name="Subcategory" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Function Name="AllCategorysWork" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetSubcategoryWork" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SubCategoryWork" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="JobsPosts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SavePostJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Title" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="nammeOfPublisher" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Salary" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="jobType" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Requirements" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="categoryJob" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="numberOfPosition" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="dateTime" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="FindJobModelStoreContainer">
+    <EntitySet Name="FJ_JobType" EntityType="Self.FJ_JobType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FJ_SubCategory_Work" EntityType="Self.FJ_SubCategory_Work" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FJ_Categorys_Of_Works" EntityType="Self.FJ_Categorys_Of_Works" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FJ_Categorys_Of_Works].[ID] AS [ID], 
+    [FJ_Categorys_Of_Works].[CategoryWork] AS [CategoryWork]
+    FROM [dbo].[FJ_Categorys_Of_Works] AS [FJ_Categorys_Of_Works]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FJ_JobsPosts" EntityType="Self.FJ_JobsPosts" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [FJ_JobsPosts].[ID] AS [ID], 
+    [FJ_JobsPosts].[Post_Title] AS [Post_Title], 
+    [FJ_JobsPosts].[Name_of_Publisher] AS [Name_of_Publisher], 
+    [FJ_JobsPosts].[Address] AS [Address], 
+    [FJ_JobsPosts].[Salary] AS [Salary], 
+    [FJ_JobsPosts].[Typ_of_job] AS [Typ_of_job], 
+    [FJ_JobsPosts].[Email] AS [Email], 
+    [FJ_JobsPosts].[Description] AS [Description], 
+    [FJ_JobsPosts].[Experience] AS [Experience], 
+    [FJ_JobsPosts].[CategoryPosition] AS [CategoryPosition], 
+    [FJ_JobsPosts].[NumberOfPosition] AS [NumberOfPosition], 
+    [FJ_JobsPosts].[dateTime] AS [dateTime]
+    FROM [dbo].[FJ_JobsPosts] AS [FJ_JobsPosts]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

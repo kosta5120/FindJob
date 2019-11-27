@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="16f7b45b6ab84f37a82240f1e364d7ce" Name="Diagram1">
+        <EntityTypeShape EntityType="FindJobModel.FJ_JobType" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_SubCategory_Work" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindJobModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_Categorys_Of_Works" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_JobsPosts" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_Attachment" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_Sing_up" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_Citys" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_Region" Width="1.5" PointX="8.375" PointY="3.75" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_Administrators" Width="1.5" PointX="3.375" PointY="8.75" />
+        <EntityTypeShape EntityType="FindJobModel.FJ_BadReports" Width="1.5" PointX="5.375" PointY="8.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

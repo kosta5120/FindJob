@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "BadPosts";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container md">
+    @*הצגת כמות משרות לחודש הנוכחי*@
+    <div class="card" dir="rtl">
+        <h3 class="card-header text-center font-weight-bold text-uppercase py-4"> כמות מודעות לחודש הנוכחי</h3>
+        <img src="@Url.Action("ChartPage")" />
+    </div>
+</div>
+<br>
+<div class="container md">
+    @*כמות משרות על פי ערים*@
+    <div class="card" dir="rtl">
+        <h3 class="card-header text-center font-weight-bold text-uppercase py-4"> כמות משרות לפי ערים</h3>
+        <img src="@Url.Action("QuantityOfJobsInEachCity")" />
+    </div>
+</div>
+<br>
+

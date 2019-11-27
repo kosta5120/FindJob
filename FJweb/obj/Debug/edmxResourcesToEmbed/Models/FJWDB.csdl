@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FindJobModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FJ_JobType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FJ_SubCategory_Work">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDCategoryWork" Type="Int32" Nullable="false" />
+    <Property Name="Subcategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FJ_Categorys_Of_Works">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FJ_JobsPosts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Post_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name_of_Publisher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Typ_of_job" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Experience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Subcategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="FindJobEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FJ_JobType" EntityType="Self.FJ_JobType" />
+    <EntitySet Name="FJ_SubCategory_Work" EntityType="Self.FJ_SubCategory_Work" />
+    <EntitySet Name="FJ_Categorys_Of_Works" EntityType="Self.FJ_Categorys_Of_Works" />
+    <EntitySet Name="FJ_JobsPosts" EntityType="Self.FJ_JobsPosts" />
+  </EntityContainer>
+</Schema>

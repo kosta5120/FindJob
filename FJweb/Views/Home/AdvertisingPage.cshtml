@@ -1,0 +1,115 @@
+﻿@using FJweb.Models;
+
+
+@model FJweb.Models.CategoryAndSubcategoryViewModel
+
+
+@{
+ViewBag.Title = "פרסום משרה";
+
+}
+<form action="SubmitPost">
+    @*שדות מילוי פרטים של משרה*@
+    <div class="container" dir="rtl">
+
+        <h1>טופס מילוי משרה</h1>
+        <h5> כותרת</h5>  @Html.TextBox("Post_Title", null, new { @class = "form-control", required = "required" })
+
+        <h5>שם המפרסם</h5> @Html.TextBox("Name_of_Publisher", null, new { @class = "form-control", required = "required" })
+        <h5> איזור</h5>
+        @if (ViewBag.regionList != null)
+        {
+        @Html.DropDownListFor(m => m.idRegion, ViewBag.regionList as SelectList, "--בחר/י איזור--", new { @class = "form-control", Name = "Region", required = "required" })
+        }
+
+        <h5>עיר</h5>
+        @Html.DropDownListFor(m => m.idCity, new SelectList(" "), "--בחר/י עיר--", new { @class = "form-control", Name = "Address", required = "required" })
+
+        <h5>שכר</h5> @Html.TextBox("Salary", null, new { @class = "form-control" })
+
+        <h5>סוג המשרה</h5>
+        @if (ViewBag.positionType != null)
+        {
+        @Html.DropDownListFor(m => m.IDTypePosition, ViewBag.positionType as SelectList, "--בחר/י סוג משרה--", new { @class = "form-control", Name = "Typ_of_job", required = "required" })
+        }
+
+        <h5>כתובת אימייל</h5> @Html.TextBox("Email", null, new { @class = "form-control", required = "required" })
+
+        <h5>תיאור</h5>
+        <div>@Html.TextArea("Description", null, new { @class = "form-control", rows = "5", required = "required" })</div>
+        <h5>דרישות</h5>
+        @Html.TextArea("Experience", null, new { @class = "form-control", rows = "5", required = "required" })
+        @*בחירה של תחום*@
+        <h5>תחום עבודה</h5>
+        @if (ViewBag.CategoryList != null)
+        {
+        @Html.DropDownListFor(m => m.ID, ViewBag.CategoryList as SelectList, "--בחר/י תחום--", new { @class = "form-control", Name = "CategoryPosition", required = "required" })
+        }
+        @*בחירה של תת תחום*@
+        <h5>תת תחום עבודה</h5>
+        @Html.DropDownListFor(m => m.IDCategoryWork, new SelectList(" "), "--בחר/י תת תחום--", new { @class = "form-control", Name = "Subcategory", required = "required" })
+
+        מספר משרה @Html.TextBox("NumberOfPosition", null, new { @class = "form-control", required = "required" })
+        <br />
+        <p align="center">
+            <input type="button" class="btn btn-primary" id="SubmitPost" onclick="verify()" data-toggle="modal" data-target="#exampleModalCenter1" value="פרסם">
+        </p>
+
+    </div>
+    @*חלונית הודעה לאחר פירסום ומחזיר לדף הבית*@
+    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">FindJob </h5>
+
+                </div>
+                <div class="modal-body">
+                    <h6 align="center">
+                        תודה שבחרתם לפרסם אצלנו
+                    </h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">סגור</button>&nbsp;
+                    <input class="btn btn-primary" id="Submit1" type="submit" value="פרסם">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+@*חיפוש  תת קטגוריה לפי מס' מזהה של קטגוריה*@
+<script>
+    $(document).ready(function () {
+        $("#ID").change(function () {
+            $.get("/Home/GetSubcategory", { ID: $("#ID").val() }, function (data) {
+                $("#IDCategoryWork").empty();
+                $.each(data, function (index, row) {
+                    $("#IDCategoryWork").append("<option value='" + row.Subcategory + "'>" + row.Subcategory + "</option>");
+                })
+            }
+            )
+        })
+
+
+    })
+
+    $(document).ready(function () {
+        $("#idRegion").change(function () {
+            $.get("/Home/GetCitysByRegion", { idRegion: $("#idRegion").val() }, function (data) {
+                $("#idCity").empty();
+                $.each(data, function (index, row) {
+                    $("#idCity").append("<option value='" + row.City + "'>" + row.City + "</option>");
+                })
+            }
+            )
+        })
+    })
+
+
+  
+
+
+</script>
+

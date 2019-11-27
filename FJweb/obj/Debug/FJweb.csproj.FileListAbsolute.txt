@@ -1,0 +1,390 @@
+C:\Users\User\Desktop\FJ\FJweb\bin\ApplicationInsights.config
+C:\Users\User\Desktop\FJ\FJweb\bin\FJweb.dll.config
+C:\Users\User\Desktop\FJ\FJweb\bin\FJweb.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\FJweb.pdb
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\csc.exe
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\csc.exe.config
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\csc.rsp
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\csi.exe
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\csi.exe.config
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\csi.rsp
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.AppContext.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Console.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.IO.Compression.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Security.Claims.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.ValueTuple.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\vbc.exe
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\vbc.exe.config
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\vbc.rsp
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\VBCSCompiler.exe
+C:\Users\User\Desktop\FJ\FJweb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\User\Desktop\FJ\FJweb\bin\Antlr3.Runtime.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.Web.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.ApplicationInsights.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\Newtonsoft.Json.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.Helpers.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.Mvc.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.Optimization.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.Razor.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.WebPages.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.WebPages.Razor.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\WebGrease.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.Helpers.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.Mvc.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.Optimization.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.Razor.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.WebPages.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Web.WebPages.Razor.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\Newtonsoft.Json.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\Antlr3.Runtime.pdb
+C:\Users\User\Desktop\FJ\FJweb\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.AI.Web.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\User\Desktop\FJ\FJweb\obj\Debug\FJweb.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\FJ\FJweb\obj\Debug\FJweb.csproj.CopyComplete
+C:\Users\User\Desktop\FJ\FJweb\obj\Debug\FJweb.dll
+C:\Users\User\Desktop\FJ\FJweb\obj\Debug\FJweb.pdb
+C:\Users\User\Desktop\FJ\FJweb\obj\Debug\FJweb.csprojAssemblyReference.cache
+C:\Users\User\Desktop\FJ\FJweb\bin\EntityFramework.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\FJ\FJweb\bin\EntityFramework.xml
+C:\Users\User\Desktop\FJ\FJweb\bin\EntityFramework.SqlServer.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\ApplicationInsights.config
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\FJweb.dll.config
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\FJweb.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\FJweb.pdb
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\csc.exe
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\csc.exe.config
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\csc.rsp
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\csi.exe
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\csi.exe.config
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\csi.rsp
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.AppContext.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Console.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.IO.Compression.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Security.Claims.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.ValueTuple.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\vbc.exe
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\vbc.exe.config
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\vbc.rsp
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\VBCSCompiler.exe
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Antlr3.Runtime.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\EntityFramework.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\EntityFramework.SqlServer.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.Web.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.ApplicationInsights.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Newtonsoft.Json.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.Helpers.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.Mvc.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.Optimization.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.Razor.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.WebPages.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.WebPages.Razor.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\WebGrease.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\EntityFramework.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\EntityFramework.SqlServer.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.Helpers.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.Mvc.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.Optimization.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.Razor.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.WebPages.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Web.WebPages.Razor.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Newtonsoft.Json.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Antlr3.Runtime.pdb
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.AI.Web.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\obj\Debug\FJweb.csproj.CoreCompileInputs.cache
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\obj\Debug\FJweb.csproj.CopyComplete
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\obj\Debug\FJweb.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\obj\Debug\FJweb.pdb
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\obj\Debug\FJweb.csprojAssemblyReference.cache
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\PagedList.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\PagedList.Mvc.dll
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\PagedList.xml
+C:\Users\KOSTA\Desktop\FJW\fjw\FJweb\bin\PagedList.Mvc.xml
+C:\Git\fjw\FJweb\bin\ApplicationInsights.config
+C:\Git\fjw\FJweb\bin\FJweb.dll.config
+C:\Git\fjw\FJweb\bin\FJweb.dll
+C:\Git\fjw\FJweb\bin\FJweb.pdb
+C:\Git\fjw\FJweb\bin\roslyn\csc.exe
+C:\Git\fjw\FJweb\bin\roslyn\csc.exe.config
+C:\Git\fjw\FJweb\bin\roslyn\csc.rsp
+C:\Git\fjw\FJweb\bin\roslyn\csi.exe
+C:\Git\fjw\FJweb\bin\roslyn\csi.exe.config
+C:\Git\fjw\FJweb\bin\roslyn\csi.rsp
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Git\fjw\FJweb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Git\fjw\FJweb\bin\roslyn\System.AppContext.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Collections.Immutable.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Console.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.IO.Compression.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.IO.FileSystem.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.IO.Pipes.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Security.AccessControl.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Security.Claims.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.ValueTuple.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Xml.XPath.dll
+C:\Git\fjw\FJweb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Git\fjw\FJweb\bin\roslyn\vbc.exe
+C:\Git\fjw\FJweb\bin\roslyn\vbc.exe.config
+C:\Git\fjw\FJweb\bin\roslyn\vbc.rsp
+C:\Git\fjw\FJweb\bin\roslyn\VBCSCompiler.exe
+C:\Git\fjw\FJweb\bin\roslyn\VBCSCompiler.exe.config
+C:\Git\fjw\FJweb\bin\Antlr3.Runtime.dll
+C:\Git\fjw\FJweb\bin\EntityFramework.dll
+C:\Git\fjw\FJweb\bin\EntityFramework.SqlServer.dll
+C:\Git\fjw\FJweb\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Git\fjw\FJweb\bin\Microsoft.AI.DependencyCollector.dll
+C:\Git\fjw\FJweb\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Git\fjw\FJweb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Git\fjw\FJweb\bin\Microsoft.AI.Web.dll
+C:\Git\fjw\FJweb\bin\Microsoft.AI.WindowsServer.dll
+C:\Git\fjw\FJweb\bin\Microsoft.ApplicationInsights.dll
+C:\Git\fjw\FJweb\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Git\fjw\FJweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Git\fjw\FJweb\bin\Microsoft.Web.Infrastructure.dll
+C:\Git\fjw\FJweb\bin\Newtonsoft.Json.dll
+C:\Git\fjw\FJweb\bin\PagedList.dll
+C:\Git\fjw\FJweb\bin\PagedList.Mvc.dll
+C:\Git\fjw\FJweb\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Git\fjw\FJweb\bin\System.Web.Helpers.dll
+C:\Git\fjw\FJweb\bin\System.Web.Mvc.dll
+C:\Git\fjw\FJweb\bin\System.Web.Optimization.dll
+C:\Git\fjw\FJweb\bin\System.Web.Razor.dll
+C:\Git\fjw\FJweb\bin\System.Web.WebPages.Deployment.dll
+C:\Git\fjw\FJweb\bin\System.Web.WebPages.dll
+C:\Git\fjw\FJweb\bin\System.Web.WebPages.Razor.dll
+C:\Git\fjw\FJweb\bin\WebGrease.dll
+C:\Git\fjw\FJweb\bin\EntityFramework.xml
+C:\Git\fjw\FJweb\bin\EntityFramework.SqlServer.xml
+C:\Git\fjw\FJweb\bin\PagedList.xml
+C:\Git\fjw\FJweb\bin\PagedList.Mvc.xml
+C:\Git\fjw\FJweb\bin\System.Web.Helpers.xml
+C:\Git\fjw\FJweb\bin\System.Web.Mvc.xml
+C:\Git\fjw\FJweb\bin\System.Web.Optimization.xml
+C:\Git\fjw\FJweb\bin\System.Web.Razor.xml
+C:\Git\fjw\FJweb\bin\System.Web.WebPages.xml
+C:\Git\fjw\FJweb\bin\System.Web.WebPages.Deployment.xml
+C:\Git\fjw\FJweb\bin\System.Web.WebPages.Razor.xml
+C:\Git\fjw\FJweb\bin\Newtonsoft.Json.xml
+C:\Git\fjw\FJweb\bin\Antlr3.Runtime.pdb
+C:\Git\fjw\FJweb\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Git\fjw\FJweb\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Git\fjw\FJweb\bin\Microsoft.AI.DependencyCollector.xml
+C:\Git\fjw\FJweb\bin\Microsoft.AI.WindowsServer.xml
+C:\Git\fjw\FJweb\bin\Microsoft.AI.Web.xml
+C:\Git\fjw\FJweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Git\fjw\FJweb\obj\Debug\FJweb.csproj.CoreCompileInputs.cache
+C:\Git\fjw\FJweb\obj\Debug\FJweb.csproj.CopyComplete
+C:\Git\fjw\FJweb\obj\Debug\FJweb.dll
+C:\Git\fjw\FJweb\obj\Debug\FJweb.pdb
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\ApplicationInsights.config
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\FJweb.dll.config
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\FJweb.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\FJweb.pdb
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\csc.exe
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\csc.exe.config
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\csc.rsp
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\csi.exe
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\csi.exe.config
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\csi.rsp
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.AppContext.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Console.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.IO.Compression.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Security.Claims.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.ValueTuple.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\vbc.exe
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\vbc.exe.config
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\vbc.rsp
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\VBCSCompiler.exe
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Antlr3.Runtime.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\EntityFramework.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\EntityFramework.SqlServer.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.Web.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.ApplicationInsights.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Newtonsoft.Json.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\PagedList.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\PagedList.Mvc.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.Helpers.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.Mvc.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.Optimization.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.Razor.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.WebPages.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.WebPages.Razor.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\WebGrease.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\EntityFramework.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\EntityFramework.SqlServer.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\PagedList.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\PagedList.Mvc.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.Helpers.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.Mvc.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.Optimization.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.Razor.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.WebPages.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Web.WebPages.Razor.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Newtonsoft.Json.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Antlr3.Runtime.pdb
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.AI.Web.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\obj\Debug\FJweb.csprojAssemblyReference.cache
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\obj\Debug\FJweb.csproj.CopyComplete
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\obj\Debug\FJweb.dll
+C:\Users\KOSTA\Desktop\My projects\fjw\FJweb\obj\Debug\FJweb.pdb
