@@ -31,11 +31,21 @@ namespace FJweb.Controllers
              if(idPostToDelete != null)
              {
                 
-                var deletePostById = db.FJ_JobsPosts.Where(x => x.ID.ToString() == idPostToDelete).First();
-                db.FJ_JobsPosts.Remove(deletePostById);
+                var deletePostById = db.FJ_JobsPosts
+                    .Where(x => x.ID.ToString() == idPostToDelete)
+                    .FirstOrDefault();
+                if (deletePostById != null)
+                {
+                    db.FJ_JobsPosts.Remove(deletePostById);
+                }
 
-                var idBadPost = db.FJ_BadReports.Where(x => x.IDPost.ToString() == idPostToDelete).First();
-                db.FJ_BadReports.Remove(idBadPost);
+                var idBadPost = db.FJ_BadReports
+                    .Where(x => x.IDPost.ToString() == idPostToDelete)
+                    .FirstOrDefault();
+                if (idBadPost != null)
+                {
+                    db.FJ_BadReports.Remove(idBadPost);
+                }
 
                 db.SaveChanges();
 
@@ -43,8 +53,13 @@ namespace FJweb.Controllers
             }
             else if (idPostToRemoveFromBadReports != null)
             {
-                var idBadPost = db.FJ_BadReports.Where(x => x.IDPost.ToString() == idPostToRemoveFromBadReports).First();
-                db.FJ_BadReports.Remove(idBadPost);
+                var idBadPost = db.FJ_BadReports
+                    .Where(x => x.IDPost.ToString() == idPostToRemoveFromBadReports)
+                    .FirstOrDefault();
+                if (idBadPost != null)
+                {
+                    db.FJ_BadReports.Remove(idBadPost);
+                }
 
                 db.SaveChanges();
             }
